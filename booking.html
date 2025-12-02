@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Экскурсии в Туле - Забронировать</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="assets/common/tula.png" alt="Тула" height="30" class="d-inline-block align-top">
+            Экскурсии в Туле
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="excursions.html">Экскурсии</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="shop.html">Сувениры</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="booking.html">Забронировать</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">О нас</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="container my-5">
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="section-nav">
+                <h5>Навигация по странице</h5>
+                <a href="#top">К началу страницы</a>
+                <a href="#booking-form">Форма бронирования</a>
+                <a href="#info">Полезная информация</a>
+            </div>
+        </div>
+        <div class="col-lg-9">
+            <a id="top"></a>
+            <h2 class="mb-4">Забронировать экскурсию</h2>
+
+            <section id="booking-form" class="mb-5">
+                <h3>Форма бронирования</h3>
+                <p>Заполните форму ниже, чтобы забронировать экскурсию. Мы свяжемся с вами для подтверждения заказа.</p>
+
+                <form action="https://www.bing.com/search?" id="BookingForm" name="BookingForm" method="get"
+                      target="_blank">
+                    <input type="hidden" name="q" value="booking">
+
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="visitor_name" class="form-label">Фамилия и имя:</label>
+                            <input type="text" class="form-control" id="visitor_name" name="visitor_name" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="visitor_phone" class="form-label">Телефон:</label>
+                            <input type="text" class="form-control" id="visitor_phone" name="visitor_phone" required>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="visitor_email" class="form-label">Email:</label>
+                            <input type="text" class="form-control" id="visitor_email" name="visitor_email" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="excursion_type" class="form-label">Тип экскурсии:</label>
+                            <input type="text" class="form-control" id="excursion_type" name="excursion_type"
+                                   placeholder="Например: Тульский кремль" required>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-md-4">
+                            <label for="participants_count" class="form-label">Количество участников:</label>
+                            <input type="number" class="form-control" id="participants_count" name="participants_count"
+                                   min="1" max="30" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="excursion_date" class="form-label">Желаемая дата:</label>
+                            <input type="text" class="form-control" id="excursion_date" name="excursion_date"
+                                   placeholder="ДД.ММ.ГГГГ" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="excursion_time" class="form-label">Желаемое время:</label>
+                            <input type="text" class="form-control" id="excursion_time" name="excursion_time"
+                                   placeholder="Например: 10:00" required>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Предпочтительный язык экскурсии:</label>
+                        <div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="excursion_language" id="lang_russian"
+                                       value="russian" required>
+                                <label class="form-check-label" for="lang_russian">Русский</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="excursion_language" id="lang_english"
+                                       value="english">
+                                <label class="form-check-label" for="lang_english">Английский</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="excursion_language" id="lang_german"
+                                       value="german">
+                                <label class="form-check-label" for="lang_german">Немецкий</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Тип группы:</label>
+                        <div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="group_type" id="group_individual"
+                                       value="individual" required>
+                                <label class="form-check-label" for="group_individual">Индивидуальная экскурсия</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="group_type" id="group_group"
+                                       value="group">
+                                <label class="form-check-label" for="group_group">Групповая экскурсия</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="special_requests" class="form-label">Особые пожелания или комментарии:</label>
+                        <textarea class="form-control" id="special_requests" name="special_requests"
+                                  rows="3"></textarea>
+                    </div>
+
+                    <div class="text-center">
+                        <input type="reset" class="btn btn-secondary me-2" value="Очистить форму">
+                        <input type="submit" class="btn btn-primary" value="Отправить заявку">
+                    </div>
+                </form>
+                <p class="mt-3"><a href="#top">К началу страницы</a></p>
+            </section>
+
+            <section id="info" class="mb-5">
+                <h3>Полезная информация</h3>
+                <figure class="text-center mb-3">
+                    <a href="assets/common/kremlin.jpg" target="_blank">
+                        <img src="assets/common/kremlin.jpg" alt="Тула" class="img-fluid rounded">
+                    </a>
+                    <figcaption class="mt-2 text-muted">Тула - город с богатой историей и культурой</figcaption>
+                </figure>
+                <p><strong>Как забронировать экскурсию:</strong></p>
+                <ul>
+                    <li>Заполните форму выше со всеми необходимыми данными</li>
+                    <li>Мы свяжемся с вами в течение 24 часов для подтверждения</li>
+                    <li>Оплата производится на месте перед началом экскурсии</li>
+                    <li>При необходимости можно перенести или отменить бронирование за 48 часов до начала</li>
+                </ul>
+                <p><strong>Что включено в стоимость:</strong></p>
+                <ul>
+                    <li>Услуги профессионального гида</li>
+                    <li>Интересный рассказ об истории и достопримечательностях</li>
+                    <li>Ответы на все ваши вопросы</li>
+                </ul>
+                <p>Если у вас возникли вопросы, свяжитесь с нами через страницу <a href="about.html">О нас</a>.</p>
+                <p><a href="#top">К началу страницы</a></p>
+            </section>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-light py-4 mt-5">
+    <div class="container text-center">
+        <p class="mb-0 text-muted">© 2025 Экскурсии в Туле. Все права защищены.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
